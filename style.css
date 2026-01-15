@@ -1,11 +1,6 @@
-/* ================================
-   GLOBAL
-   ================================ */
-
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  background: #ffffff;
 }
 
 h2 {
@@ -17,74 +12,12 @@ h2 {
   margin: auto;
 }
 
-/* ================================
-   DAY CELL STRUCTURE FIX
-   ================================ */
-
-.fc-daygrid-day-frame {
-  min-height: 120px;
-}
-
-.fc-daygrid-day-top {
-  flex-direction: row;
-}
-
-/* ================================
-   EVENT RENDER FIX (IMPORTANT)
-   ================================ */
-
-.fc-daygrid-event-harness {
-  position: relative !important;
-}
-
-.fc-daygrid-event-harness-abs {
-  position: relative !important;
-}
-
-.fc-daygrid-event {
-  display: block;
-  white-space: normal !important;
-  height: auto !important;
-  max-height: none !important;
-  padding: 4px 6px;
-  border-radius: 6px;
-}
-
-/* FULL TEXT VISIBILITY */
-.fc-event-title,
-.fc-event-title-container {
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: unset !important;
-  word-break: break-word;
-  text-align: center;
+.fc-daygrid-day-number {
   font-weight: bold;
-  font-size: 13px;
-  line-height: 1.35;
 }
-
-/* REMOVE CLIPPING */
-.fc-daygrid-day-events {
-  overflow: visible !important;
-}
-
-/* ================================
-   EVENT COLOR
-   ================================ */
-
-.fc-event {
-  background-color: #2563eb;
-  border: none;
-  color: #ffffff;
-}
-
-/* ================================
-   TOOLTIP
-   ================================ */
-
 .sales-tooltip {
   position: absolute;
-  background: #1f2937;
+  background: #1f2937;        /* dark grey */
   color: #fff;
   padding: 10px 12px;
   border-radius: 8px;
@@ -109,20 +42,17 @@ h2 {
   margin: 3px 0;
 }
 
-/* ================================
-   MONTHLY TOTALS
-   ================================ */
-
 #monthlyTotals {
   margin: 20px 0;
 }
 
 .month-card {
   background: #1e1e1e;
-  color: #ffffff;
+  color: #fff;
   padding: 12px 18px;
   margin-bottom: 12px;
   border-radius: 10px;
+  width: fit-content;
   min-width: 260px;
 }
 
