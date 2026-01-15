@@ -1198,5 +1198,615 @@
       "Gurukul": 71882,
       "Vastrapur": 70182
     }
+  },
+ {
+    "date": "2025-05-01",
+    "outlets": {
+      "Chetak Circle": 28998,
+      "Mali Colony": 15661,
+      "Maple": 37055,
+      "Gurukul": 35474,
+      "Vastrapur": 37530
+    }
+  },
+  {
+    "date": "2025-05-02",
+    "outlets": {
+      "Chetak Circle": 46165,
+      "Mali Colony": 42119,
+      "Maple": 82033,
+      "Gurukul": 77175,
+      "Vastrapur": 73407
+    }
+  },
+  {
+    "date": "2025-05-03",
+    "outlets": {
+      "Chetak Circle": 37863,
+      "Mali Colony": 22052,
+      "Maple": 49819,
+      "Gurukul": 49429,
+      "Vastrapur": 64344
+    }
+  },
+  {
+    "date": "2025-05-04",
+    "outlets": {
+      "Chetak Circle": 39724,
+      "Mali Colony": 38877,
+      "Maple": 68318,
+      "Gurukul": 63655,
+      "Vastrapur": 74556
+    }
+  },
+  {
+    "date": "2025-05-05",
+    "outlets": {
+      "Chetak Circle": 21772,
+      "Mali Colony": 19087,
+      "Maple": 35143,
+      "Gurukul": 38351,
+      "Vastrapur": 37755
+    }
+  },
+  {
+    "date": "2025-05-06",
+    "outlets": {
+      "Chetak Circle": 12947,
+      "Mali Colony": 18664,
+      "Maple": 39492,
+      "Gurukul": 54601,
+      "Vastrapur": 29090
+    }
+  },
+  {
+    "date": "2025-05-07",
+    "outlets": {
+      "Chetak Circle": 20281,
+      "Mali Colony": 30910,
+      "Maple": 89083,
+      "Gurukul": 76089,
+      "Vastrapur": 63894
+    }
+  },
+  {
+    "date": "2025-05-08",
+    "outlets": {
+      "Chetak Circle": 22192,
+      "Mali Colony": 26038,
+      "Maple": 39465,
+      "Gurukul": 38279,
+      "Vastrapur": 36643
+    }
+  },
+  {
+    "date": "2025-05-09",
+    "outlets": {
+      "Chetak Circle": 53495,
+      "Mali Colony": 34807,
+      "Maple": 96926,
+      "Gurukul": 68338,
+      "Vastrapur": 78433
+    }
+  },
+  {
+    "date": "2025-05-10",
+    "outlets": {
+      "Chetak Circle": 24443,
+      "Mali Colony": 37799,
+      "Maple": 36215,
+      "Gurukul": 38021,
+      "Vastrapur": 52545
+    }
+  },
+  {
+    "date": "2025-05-11",
+    "outlets": {
+      "Chetak Circle": 70186,
+      "Mali Colony": 31490,
+      "Maple": 61919,
+      "Gurukul": 79283,
+      "Vastrapur": 59685
+    }
+  },
+  {
+    "date": "2025-05-12",
+    "outlets": {
+      "Chetak Circle": 20801,
+      "Mali Colony": 23762,
+      "Maple": 27729,
+      "Gurukul": 38302,
+      "Vastrapur": 34535
+    }
+  },
+  {
+    "date": "2025-05-13",
+    "outlets": {
+      "Chetak Circle": 29032,
+      "Mali Colony": 28602,
+      "Maple": 34288,
+      "Gurukul": 32173,
+      "Vastrapur": 38159
+    }
+  },
+  {
+    "date": "2025-05-14",
+    "outlets": {
+      "Chetak Circle": 48493,
+      "Mali Colony": 27241,
+      "Maple": 74431,
+      "Gurukul": 55017,
+      "Vastrapur": 60118
+    }
+  },
+  {
+    "date": "2025-05-15",
+    "outlets": {
+      "Chetak Circle": 32827,
+      "Mali Colony": 21571,
+      "Maple": 37597,
+      "Gurukul": 37221,
+      "Vastrapur": 32500
+    }
+  },
+  {
+    "date": "2025-05-16",
+    "outlets": {
+      "Chetak Circle": 58606,
+      "Mali Colony": 46498,
+      "Maple": 89738,
+      "Gurukul": 78795,
+      "Vastrapur": 79525
+    }
+  },
+  {
+    "date": "2025-05-17",
+    "outlets": {
+      "Chetak Circle": 54636,
+      "Mali Colony": 36460,
+      "Maple": 39868,
+      "Gurukul": 55851,
+      "Vastrapur": 32758
+    }
+  },
+  {
+    "date": "2025-05-18",
+    "outlets": {
+      "Chetak Circle": 62012,
+      "Mali Colony": 34509,
+      "Maple": 60872,
+      "Gurukul": 63910,
+      "Vastrapur": 59507
+    }
+  },
+  {
+    "date": "2025-05-19",
+    "outlets": {
+      "Chetak Circle": 15613,
+      "Mali Colony": 21604,
+      "Maple": 42089,
+      "Gurukul": 27882,
+      "Vastrapur": 28041
+    }
+  },
+  {
+    "date": "2025-05-20",
+    "outlets": {
+      "Chetak Circle": 24849,
+      "Mali Colony": 38577,
+      "Maple": 24050,
+      "Gurukul": 28841,
+      "Vastrapur": 28696
+    }
+  },
+  {
+    "date": "2025-05-21",
+    "outlets": {
+      "Chetak Circle": 41693,
+      "Mali Colony": 40162,
+      "Maple": 91058,
+      "Gurukul": 80261,
+      "Vastrapur": 61320
+    }
+  },
+  {
+    "date": "2025-05-22",
+    "outlets": {
+      "Chetak Circle": 24209,
+      "Mali Colony": 23810,
+      "Maple": 32174,
+      "Gurukul": 45051,
+      "Vastrapur": 32455
+    }
+  },
+  {
+    "date": "2025-05-23",
+    "outlets": {
+      "Chetak Circle": 45870,
+      "Mali Colony": 27636,
+      "Maple": 75185,
+      "Gurukul": 69647,
+      "Vastrapur": 70716
+    }
+  },
+  {
+    "date": "2025-05-24",
+    "outlets": {
+      "Chetak Circle": 66172,
+      "Mali Colony": 34925,
+      "Maple": 47832,
+      "Gurukul": 42686,
+      "Vastrapur": 37158
+    }
+  },
+  {
+    "date": "2025-05-25",
+    "outlets": {
+      "Chetak Circle": 75667,
+      "Mali Colony": 37705,
+      "Maple": 60741,
+      "Gurukul": 65086,
+      "Vastrapur": 52108
+    }
+  },
+  {
+    "date": "2025-05-26",
+    "outlets": {
+      "Chetak Circle": 22600,
+      "Mali Colony": 17537,
+      "Maple": 28670,
+      "Gurukul": 34755,
+      "Vastrapur": 34156
+    }
+  },
+  {
+    "date": "2025-05-27",
+    "outlets": {
+      "Chetak Circle": 42401,
+      "Mali Colony": 28255,
+      "Maple": 29961,
+      "Gurukul": 24474,
+      "Vastrapur": 22828
+    }
+  },
+  {
+    "date": "2025-05-28",
+    "outlets": {
+      "Chetak Circle": 39329,
+      "Mali Colony": 30165,
+      "Maple": 66735,
+      "Gurukul": 73477,
+      "Vastrapur": 51205
+    }
+  },
+  {
+    "date": "2025-05-29",
+    "outlets": {
+      "Chetak Circle": 24910,
+      "Mali Colony": 30846,
+      "Maple": 27730,
+      "Gurukul": 42802,
+      "Vastrapur": 24605
+    }
+  },
+  {
+    "date": "2025-05-30",
+    "outlets": {
+      "Chetak Circle": 72463,
+      "Mali Colony": 39237,
+      "Maple": 92623,
+      "Gurukul": 101124,
+      "Vastrapur": 79018
+    }
+  },
+  {
+    "date": "2025-05-31",
+    "outlets": {
+      "Chetak Circle": 58127,
+      "Mali Colony": 34023,
+      "Maple": 45503,
+      "Gurukul": 47881,
+      "Vastrapur": 36279
+    }
+  },
+  {
+    "date": "2025-06-01",
+    "outlets": {
+      "Chetak Circle": 48164,
+      "Mali Colony": 40259,
+      "Maple": 65865,
+      "Gurukul": 80135,
+      "Vastrapur": 66570
+    }
+  },
+  {
+    "date": "2025-06-02",
+    "outlets": {
+      "Chetak Circle": 34510,
+      "Mali Colony": 21826,
+      "Maple": 24008,
+      "Gurukul": 31634,
+      "Vastrapur": 40622
+    }
+  },
+  {
+    "date": "2025-06-03",
+    "outlets": {
+      "Chetak Circle": 30933,
+      "Mali Colony": 40279,
+      "Maple": 42630,
+      "Gurukul": 47458,
+      "Vastrapur": 39578
+    }
+  },
+  {
+    "date": "2025-06-04",
+    "outlets": {
+      "Chetak Circle": 50821,
+      "Mali Colony": 35891,
+      "Maple": 101811,
+      "Gurukul": 93924,
+      "Vastrapur": 73765
+    }
+  },
+  {
+    "date": "2025-06-05",
+    "outlets": {
+      "Chetak Circle": 41797,
+      "Mali Colony": 19303,
+      "Maple": 31319,
+      "Gurukul": 41713,
+      "Vastrapur": 28951
+    }
+  },
+  {
+    "date": "2025-06-06",
+    "outlets": {
+      "Chetak Circle": 65845,
+      "Mali Colony": 47353,
+      "Maple": 92137,
+      "Gurukul": 83175,
+      "Vastrapur": 58780
+    }
+  },
+  {
+    "date": "2025-06-07",
+    "outlets": {
+      "Chetak Circle": 63863,
+      "Mali Colony": 45756,
+      "Maple": 40911,
+      "Gurukul": 48766,
+      "Vastrapur": 35524
+    }
+  },
+  {
+    "date": "2025-06-08",
+    "outlets": {
+      "Chetak Circle": 84481,
+      "Mali Colony": 50233,
+      "Maple": 62022,
+      "Gurukul": 81570,
+      "Vastrapur": 71195
+    }
+  },
+  {
+    "date": "2025-06-09",
+    "outlets": {
+      "Chetak Circle": 35793,
+      "Mali Colony": 27174,
+      "Maple": 25560,
+      "Gurukul": 30710,
+      "Vastrapur": 22156
+    }
+  },
+  {
+    "date": "2025-06-10",
+    "outlets": {
+      "Chetak Circle": 37543,
+      "Mali Colony": 37860,
+      "Maple": 23415,
+      "Gurukul": 36473,
+      "Vastrapur": 22361
+    }
+  },
+  {
+    "date": "2025-06-11",
+    "outlets": {
+      "Chetak Circle": 47949,
+      "Mali Colony": 39496,
+      "Maple": 79114,
+      "Gurukul": 66826,
+      "Vastrapur": 52529
+    }
+  },
+  {
+    "date": "2025-06-12",
+    "outlets": {
+      "Chetak Circle": 42317,
+      "Mali Colony": 27029,
+      "Maple": 29397,
+      "Gurukul": 36458,
+      "Vastrapur": 33314
+    }
+  },
+  {
+    "date": "2025-06-13",
+    "outlets": {
+      "Chetak Circle": 80175,
+      "Mali Colony": 38426,
+      "Maple": 105397,
+      "Gurukul": 93099,
+      "Vastrapur": 62757
+    }
+  },
+  {
+    "date": "2025-06-14",
+    "outlets": {
+      "Chetak Circle": 63144,
+      "Mali Colony": 30716,
+      "Maple": 34249,
+      "Gurukul": 59071,
+      "Vastrapur": 47534
+    }
+  },
+  {
+    "date": "2025-06-15",
+    "outlets": {
+      "Chetak Circle": 58610,
+      "Mali Colony": 41430,
+      "Maple": 67117,
+      "Gurukul": 76656,
+      "Vastrapur": 57299
+    }
+  },
+  {
+    "date": "2025-06-16",
+    "outlets": {
+      "Chetak Circle": 33288,
+      "Mali Colony": 29546,
+      "Maple": 19771,
+      "Gurukul": 36838,
+      "Vastrapur": 28098
+    }
+  },
+  {
+    "date": "2025-06-17",
+    "outlets": {
+      "Chetak Circle": 34262,
+      "Mali Colony": 19827,
+      "Maple": 20104,
+      "Gurukul": 35031,
+      "Vastrapur": 31235
+    }
+  },
+  {
+    "date": "2025-06-18",
+    "outlets": {
+      "Chetak Circle": 50944,
+      "Mali Colony": 41805,
+      "Maple": 60721,
+      "Gurukul": 50950,
+      "Vastrapur": 43304
+    }
+  },
+  {
+    "date": "2025-06-19",
+    "outlets": {
+      "Chetak Circle": 34445,
+      "Mali Colony": 20556,
+      "Maple": 20663,
+      "Gurukul": 42793,
+      "Vastrapur": 32099
+    }
+  },
+  {
+    "date": "2025-06-20",
+    "outlets": {
+      "Chetak Circle": 66775,
+      "Mali Colony": 46491,
+      "Maple": 88695,
+      "Gurukul": 81406,
+      "Vastrapur": 58120
+    }
+  },
+  {
+    "date": "2025-06-21",
+    "outlets": {
+      "Chetak Circle": 57106,
+      "Mali Colony": 35967,
+      "Maple": 46025,
+      "Gurukul": 56279,
+      "Vastrapur": 42595
+    }
+  },
+  {
+    "date": "2025-06-22",
+    "outlets": {
+      "Chetak Circle": 60128,
+      "Mali Colony": 50877,
+      "Maple": 66261,
+      "Gurukul": 79742,
+      "Vastrapur": 60310
+    }
+  },
+  {
+    "date": "2025-06-23",
+    "outlets": {
+      "Chetak Circle": 26270,
+      "Mali Colony": 31099,
+      "Maple": 22526,
+      "Gurukul": 39720,
+      "Vastrapur": 26124
+    }
+  },
+  {
+    "date": "2025-06-24",
+    "outlets": {
+      "Chetak Circle": 26405,
+      "Mali Colony": 31435,
+      "Maple": 30138,
+      "Gurukul": 35055,
+      "Vastrapur": 24685
+    }
+  },
+  {
+    "date": "2025-06-25",
+    "outlets": {
+      "Chetak Circle": 48908,
+      "Mali Colony": 43641,
+      "Maple": 65012,
+      "Gurukul": 72107,
+      "Vastrapur": 65964
+    }
+  },
+  {
+    "date": "2025-06-26",
+    "outlets": {
+      "Chetak Circle": 39139,
+      "Mali Colony": 30540,
+      "Maple": 28569,
+      "Gurukul": 30911,
+      "Vastrapur": 38084
+    }
+  },
+  {
+    "date": "2025-06-27",
+    "outlets": {
+      "Chetak Circle": 59905,
+      "Mali Colony": 54496,
+      "Maple": 115192,
+      "Gurukul": 99625,
+      "Vastrapur": 86703
+    }
+  },
+  {
+    "date": "2025-06-28",
+    "outlets": {
+      "Chetak Circle": 81525,
+      "Mali Colony": 31401,
+      "Maple": 49209,
+      "Gurukul": 49537,
+      "Vastrapur": 56516
+    }
+  },
+  {
+    "date": "2025-06-29",
+    "outlets": {
+      "Chetak Circle": 48519,
+      "Mali Colony": 62835,
+      "Maple": 68235,
+      "Gurukul": 65703,
+      "Vastrapur": 61874
+    }
+  },
+  {
+    "date": "2025-06-30",
+    "outlets": {
+      "Chetak Circle": 41323,
+      "Mali Colony": 31936,
+      "Maple": 24857,
+      "Gurukul": 30524,
+      "Vastrapur": 34408
+    }
   }
 ]
