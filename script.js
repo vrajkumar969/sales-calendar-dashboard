@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(salesData => {
 
       /* ===============================
-         MONTHLY TOTAL CALCULATION
+         CALCULATE MONTHLY TOTALS
          =============================== */
       const monthlyTotals = {};
 
@@ -22,10 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       /* ===============================
-         BUILD CALENDAR EVENTS
+         CREATE EVENTS
          =============================== */
       const events = salesData.map(item => {
-
         const totalSales = Object.values(item.outlets)
           .reduce((sum, val) => sum + val, 0);
 
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       /* ===============================
-         INITIALIZE CALENDAR
+         INIT CALENDAR
          =============================== */
       const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: "multiMonthYear",
@@ -53,35 +52,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
         events: events,
 
-        /* ===============================
-           ADD MONTHLY TOTAL BELOW MONTH NAME
-           =============================== */
-        viewDidMount: function () {
+        /* 🔑 THIS IS THE KEY FIX */
+        datesSet: function () {
 
-          document.querySelectorAll(".fc-multimonth-title").forEach(header => {
+          setTimeout(() => {
+            document.querySelectorAll(".fc-multimonth-title").forEach(header => {
 
-            if (header.dataset.totalAdded) return;
+              if (header.dataset.totalAdded) return;
 
-            const text = header.innerText.trim(); // "January 2025"
-            const date = new Date(text + " 1");
-            if (isNaN(date)) return;
+              const text = header.innerText.trim(); // "January 2025"
+              const date = new Date(text + " 1");
+              if (isNaN(date)) return;
 
-            const key = `${date.getFullYear()}-${date.getMonth()}`;
-            const total = monthlyTotals[key];
-            if (!total) return;
+              const key = `${date.getFullYear()}-${date.getMonth()}`;
+              const total = monthlyTotals[key];
+              if (!total) return;
 
-            const div = document.createElement("div");
-            div.className = "month-total-inline";
-            div.innerText = `Total = ₹ ${total.toLocaleString("en-IN")}`;
+              const div = document.createElement("div");
+              div.className = "month-total-inline";
+              div.innerText = `Total = ₹ ${total.toLocaleString("en-IN")}`;
 
-            header.appendChild(div);
-            header.dataset.totalAdded = "true";
-          });
+              header.appendChild(div);
+              header.dataset.totalAdded = "true";
+            });
+          }, 50);
         },
 
-        /* ===============================
-           CUSTOM TOOLTIP
-           =============================== */
+        /* TOOLTIP */
         eventDidMount: function (info) {
 
           const tooltip = document.createElement("div");
@@ -101,26 +98,16 @@ document.addEventListener("DOMContentLoaded", function () {
           tooltip.innerHTML = html;
           document.body.appendChild(tooltip);
 
-          info.el.addEventListener("mouseenter", () => {
-            tooltip.style.display = "block";
-          });
-
+          info.el.addEventListener("mouseenter", () => tooltip.style.display = "block");
           info.el.addEventListener("mousemove", e => {
-            tooltip.style.left = e.pageX + 15 + "px";
-            tooltip.style.top = e.pageY + 15 + "px";
+            tooltip.style.left = e.pageX + 12 + "px";
+            tooltip.style.top = e.pageY + 12 + "px";
           });
-
-          info.el.addEventListener("mouseleave", () => {
-            tooltip.style.display = "none";
-          });
+          info.el.addEventListener("mouseleave", () => tooltip.style.display = "none");
         }
 
       });
 
       calendar.render();
-    })
-    .catch(err => {
-      console.error("Error loading sales.json", err);
     });
-
 });
