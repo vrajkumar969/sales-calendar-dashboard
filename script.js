@@ -67,7 +67,7 @@ calendar.render();
 
   const calendarEl = document.getElementById("calendar");
 
-  fetch("data/sales.json")
+  fetch('data/sales.json')
     .then(response => response.json())
     .then(salesData => {
 
