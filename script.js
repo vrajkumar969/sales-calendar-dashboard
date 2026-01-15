@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       /* ===============================
-         CREATE EVENTS
+         BUILD EVENTS
          =============================== */
       const events = salesData.map(item => {
         const totalSales = Object.values(item.outlets)
@@ -50,32 +50,28 @@ document.addEventListener("DOMContentLoaded", function () {
           right: ""
         },
 
-        events: events,
+        events,
 
-        /* 🔑 THIS IS THE KEY FIX */
-        datesSet: function () {
+        /* ✅ OFFICIAL & STABLE SOLUTION */
+        multiMonthTitleContent: function (arg) {
 
-          setTimeout(() => {
-            document.querySelectorAll(".fc-multimonth-title").forEach(header => {
+          const year = arg.date.getFullYear();
+          const month = arg.date.getMonth();
+          const key = `${year}-${month}`;
+          const total = monthlyTotals[key] || 0;
 
-              if (header.dataset.totalAdded) return;
+          const monthName = arg.text; // "January 2025"
 
-              const text = header.innerText.trim(); // "January 2025"
-              const date = new Date(text + " 1");
-              if (isNaN(date)) return;
-
-              const key = `${date.getFullYear()}-${date.getMonth()}`;
-              const total = monthlyTotals[key];
-              if (!total) return;
-
-              const div = document.createElement("div");
-              div.className = "month-total-inline";
-              div.innerText = `Total = ₹ ${total.toLocaleString("en-IN")}`;
-
-              header.appendChild(div);
-              header.dataset.totalAdded = "true";
-            });
-          }, 50);
+          return {
+            html: `
+              <div>
+                <div>${monthName}</div>
+                <div class="month-total-inline">
+                  Total = ₹ ${total.toLocaleString("en-IN")}
+                </div>
+              </div>
+            `
+          };
         },
 
         /* TOOLTIP */
