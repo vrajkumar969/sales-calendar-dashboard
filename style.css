@@ -23,33 +23,9 @@ h2 {
   overflow: visible !important;
 }
 
-/* Event box */
-.fc-daygrid-event {
-  display: block;
-  white-space: normal !important;
-  margin: 3px 0;
-}
-
 /* Remove internal clipping */
 .fc-event-title-container {
   overflow: visible !important;
-}
-
-/* Event text */
-.fc-event-title {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.3;   /* 🔴 KEY FIX */
-  white-space: normal !important;
-  text-align: center;
-}
-
-/* Style */
-.fc-event {
-  background: #1e40af;
-  border-radius: 6px;
-  border: none;
-  padding: 6px;
 }
 
 .sales-tooltip {
