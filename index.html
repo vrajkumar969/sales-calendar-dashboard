@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Sales Calendar</title>
+  <meta charset="UTF-8">
+  <title>Multi-Month Sales Calendar</title>
 
-<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet" />
 
-<link rel="stylesheet" href="style.css">
+  <style>
+    #calendar {
+      max-width: 900px;
+      margin: 40px auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .sales-tooltip {
+      position: absolute;
+      background: #fff;
+      border: 1px solid #333;
+      padding: 5px 10px;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+      font-size: 14px;
+    }
+    .tooltip-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .tooltip-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
 </head>
-
 <body>
-<h2>Multi-Month Sales Calendar</h2>
-<div id="calendar"></div>
 
-<script src="script.js"></script>
+  <h1>Multi-Month Sales Calendar</h1>
+  <div id="calendar"></div>
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+  <script src="sales-calendar.js"></script>
+
 </body>
 </html>
