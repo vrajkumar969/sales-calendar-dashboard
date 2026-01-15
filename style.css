@@ -1,50 +1,23 @@
-/*body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-}
-
-h2 {
-  text-align: center;
-}
-
-#calendar {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.fc-daygrid-day-number {
-  font-weight: bold;
-}
-.sales-tooltip {
-  position: absolute;
-  background: #1f2937;        /* dark grey */
-  /*
-  color: #fff;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  min-width: 220px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  display: none;
-  z-index: 9999;
-  pointer-events: none;
-}
-
-.tooltip-title {
-  font-weight: bold;
-  margin-bottom: 6px;
-  border-bottom: 1px solid #374151;
-  padding-bottom: 4px;
-}
-
-.tooltip-row {
-  display: flex;
-  justify-content: space-between;
-  margin: 3px 0;
-}*/
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
+}
+
+.month-total-inline {
+  font-size: 14px;
+  color: #2e7d32;
+  font-weight: 600;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* Event badge */
+.fc-event {
+  background: #2f80ed;
+  border: none;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 
 /* Tooltip */
@@ -52,13 +25,12 @@ body {
   position: fixed;
   display: none;
   background: #222;
-  color: #fff;
-  padding: 10px 12px;
+  color: white;
+  padding: 10px;
   border-radius: 6px;
   font-size: 13px;
   z-index: 9999;
   pointer-events: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .tooltip-title {
@@ -69,28 +41,4 @@ body {
 .tooltip-row {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
-}
-
-/* Month total under month name */
-.month-total-inline {
-  font-size: 14px;
-  margin-top: 4px;
-  color: #2e7d32;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* Make sales text readable */
-.fc-event {
-  background: #2f80ed;
-  border: none;
-  font-size: 12px;
-  padding: 2px;
-  border-radius: 4px;
-}
-
-/* Reduce clutter */
-.fc-daygrid-event {
-  white-space: normal;
 }
