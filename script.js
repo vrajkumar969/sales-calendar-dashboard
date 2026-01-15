@@ -1,62 +1,89 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-  fetch('data/sales.json')
+  const calendarEl = document.getElementById("calendar");
+
+  fetch("data/sales.json")
     .then(response => response.json())
-    .then(data => {
+    .then(salesData => {
 
-      const events = data.map(item => ({
-        title: "₹" + item.totalSales.toLocaleString(),   // ONLY TOTAL SALES SHOWN
-        start: item.date,
-        allDay: true,
-        extendedProps: item.outlets                      // STORE OUTLET DATA
-      }));
+      /* ===============================
+         BUILD CALENDAR EVENTS
+         =============================== */
 
-      const calendar = new FullCalendar.Calendar(
-        document.getElementById('calendar'),
-        {
-          initialView: 'multiMonthYear',
-          multiMonthMaxColumns: 3,
-          height: 'auto',
+      const events = salesData.map(item => {
 
-          events: events,
+        const totalSales = Object.values(item.outlets)
+          .reduce((sum, val) => sum + val, 0);
 
-          eventDidMount: function(info) {
+        return {
+          title: `₹${totalSales.toLocaleString()}`,
+          start: item.date,
+          allDay: true,
+          extendedProps: item.outlets
+        };
+      });
 
-  const tooltip = document.createElement("div");
-  tooltip.className = "sales-tooltip";
+      /* ===============================
+         INITIALIZE CALENDAR
+         =============================== */
 
-  let html = `<div class="tooltip-title">Outlet-wise Sales</div>`;
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: "dayGridMonth",
+        initialDate: salesData[0].date,
+        height: "auto",
+        fixedWeekCount: false,
+        showNonCurrentDates: false,
 
-  for (let outlet in info.event.extendedProps) {
-    html += `
-      <div class="tooltip-row">
-        <span>${outlet}</span>
-        <span>₹${info.event.extendedProps[outlet].toLocaleString()}</span>
-      </div>
-    `;
-  }
+        headerToolbar: {
+          left: "prev,next today",
+          center: "title",
+          right: ""
+        },
 
-  tooltip.innerHTML = html;
-  document.body.appendChild(tooltip);
+        events: events,
 
-  info.el.addEventListener("mouseenter", (e) => {
-    tooltip.style.display = "block";
-  });
+        /* ===============================
+           CUSTOM TOOLTIP
+           =============================== */
 
-  info.el.addEventListener("mousemove", (e) => {
-    tooltip.style.left = e.pageX + 15 + "px";
-    tooltip.style.top = e.pageY + 15 + "px";
-  });
+        eventDidMount: function (info) {
 
-  info.el.addEventListener("mouseleave", () => {
-    tooltip.style.display = "none";
-  });
-}
-            info.el.setAttribute("title", tooltip);
-          }
+          const tooltip = document.createElement("div");
+          tooltip.className = "sales-tooltip";
+
+          let html = `<div class="tooltip-title">Outlet-wise Sales</div>`;
+
+          Object.entries(info.event.extendedProps).forEach(([outlet, value]) => {
+            html += `
+              <div class="tooltip-row">
+                <span>${outlet}</span>
+                <span>₹${value.toLocaleString()}</span>
+              </div>
+            `;
+          });
+
+          tooltip.innerHTML = html;
+          document.body.appendChild(tooltip);
+
+          info.el.addEventListener("mouseenter", () => {
+            tooltip.style.display = "block";
+          });
+
+          info.el.addEventListener("mousemove", (e) => {
+            tooltip.style.left = e.pageX + 15 + "px";
+            tooltip.style.top = e.pageY + 15 + "px";
+          });
+
+          info.el.addEventListener("mouseleave", () => {
+            tooltip.style.display = "none";
+          });
         }
-      );
+      });
 
       calendar.render();
+    })
+    .catch(err => {
+      console.error("Error loading sales-data.json", err);
     });
+
 });
