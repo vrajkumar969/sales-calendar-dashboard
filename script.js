@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
          =============================== */
       const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'multiMonthYear',
-        multiMonthMaxColumns: 3,
+        multiMonthMaxColumns: 2,
         height: 'auto',
 
         dayMaxEventRows: false,   // 🔴 IMPORTANT
