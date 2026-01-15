@@ -3,12 +3,12 @@ body {
   margin: 20px;
 }
 
+/* Monthly total below month name */
 .month-total-inline {
   font-size: 14px;
+  margin-top: 4px;
   color: #2e7d32;
   font-weight: 600;
-  margin-top: 4px;
-  text-align: center;
 }
 
 /* Event badge */
@@ -25,7 +25,7 @@ body {
   position: fixed;
   display: none;
   background: #222;
-  color: white;
+  color: #fff;
   padding: 10px;
   border-radius: 6px;
   font-size: 13px;
