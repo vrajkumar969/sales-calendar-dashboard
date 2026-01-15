@@ -32,7 +32,7 @@
   {
     "Date": "2025-01-04",
     outlets":
-    "Chetak Circle": 48945,
+    {"Chetak Circle": 48945,
     "Mali Colony": 28929,
     "Maple": 33289,
     "Gurukul": 38599,
