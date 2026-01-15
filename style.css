@@ -18,11 +18,6 @@ h2 {
   padding: 6px;
 }
 
-/* Allow content to overflow */
-.fc-daygrid-day-events {
-  overflow: visible !important;
-}
-
 /* Remove internal clipping */
 .fc-event-title-container {
   overflow: visible !important;
