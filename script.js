@@ -22,7 +22,7 @@ const yearlyHolidays = {
     "2025-08-21": "Raksha Bandhan",
     "2025-08-29": "Ganesh Chaturthi",
     "2025-09-22": "Navratri Day 1",
-    "2025-09-23": "Navratri Day 2", 
+    "2025-09-23": "Navratri Day 2",
     "2025-09-24": "Navratri Day 3",
     "2025-09-25": "Navratri Day 4",
     "2025-09-26": "Navratri Day 5",
@@ -30,12 +30,12 @@ const yearlyHolidays = {
     "2025-09-28": "Navratri Day 7",
     "2025-09-29": "Navratri Day 8",
     "2025-09-30": "Navratri Day 9",
-    "2025-10-01": "Navratri Day 10", 
+    "2025-10-01": "Navratri Day 10",
     "2025-10-02": "Dussehra",
     "2025-10-20": "Diwali",
     "2025-10-22": "Bhai Dooj",
-    "2025-11-05": "Guru Nanak’s Birthday",
-  },
+    "2025-11-05": "Guru Nanak’s Birthday"
+  }
 };
 
 /* ===============================
@@ -46,7 +46,7 @@ function getHeatColor(sales, min, max) {
   if (min === max) return "#16a34a";
 
   const ratio = (sales - min) / (max - min);
-  const startColor = [220, 252, 231]; 
+  const startColor = [220, 252, 231];
   const endColor = [22, 163, 74];
 
   const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * ratio);
@@ -82,7 +82,6 @@ function calculateMonthlyTotals(data) {
    DOM CONTENT LOADED
    =============================== */
 document.addEventListener("DOMContentLoaded", function () {
-
   const calendarEl = document.getElementById("calendar");
 
   fetch('data/sales.json?v=' + new Date().getTime())
@@ -184,7 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         /* SALES TOOLTIP */
         eventDidMount: function (info) {
-
           const tooltip = document.createElement("div");
           tooltip.className = "sales-tooltip";
 
@@ -206,14 +204,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
           info.el.addEventListener("mousemove", e => {
             const tooltipRect = tooltip.getBoundingClientRect();
-            let left = e.pageX + 15;
-            let top = e.pageY + 15;
+            let left = e.clientX + 10;
+            let top = e.clientY + 10;
 
-            if (left + tooltipRect.width > window.pageXOffset + window.innerWidth) {
-              left = e.pageX - tooltipRect.width - 15;
+            // Keep tooltip inside viewport (mobile-friendly)
+            if (left + tooltipRect.width > window.innerWidth) {
+              left = e.clientX - tooltipRect.width - 10;
             }
-            if (top + tooltipRect.height > window.pageYOffset + window.innerHeight) {
-              top = e.pageY - tooltipRect.height - 15;
+            if (top + tooltipRect.height > window.innerHeight) {
+              top = e.clientY - tooltipRect.height - 10;
             }
 
             tooltip.style.left = left + "px";
@@ -230,5 +229,4 @@ document.addEventListener("DOMContentLoaded", function () {
       calendar.render();
     })
     .catch(err => console.error("Error loading sales.json", err));
-
 });
