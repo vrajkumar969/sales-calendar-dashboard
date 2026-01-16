@@ -90,6 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(salesData => {
 
       const monthlyTotals = calculateMonthlyTotals(salesData);
+
+      renderMonthlySalesChart(monthlyTotals);
+
       const dailyTotals = salesData.map(item =>
         Object.values(item.outlets).reduce((sum, val) => sum + val, 0)
       );
