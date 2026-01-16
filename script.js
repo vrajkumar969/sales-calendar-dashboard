@@ -12,7 +12,7 @@ const fixedHolidays = {
 };
 
 const yearlyHolidays = {
-   2025: {
+  2025: {
     "2025-02-26": "Maha Shivaratri",
     "2025-03-14": "Holi",
     "2025-04-10": "Mahavir Jayanti",
@@ -57,6 +57,28 @@ function getHeatColor(sales, min, max) {
 }
 
 /* ===============================
+   MONTHLY TOTAL CALCULATION
+   =============================== */
+function calculateMonthlyTotals(data) {
+  const monthly = {};
+  data.forEach(item => {
+    const date = new Date(item.date);
+    const key = `${date.getFullYear()}-${date.getMonth()}`;
+
+    if (!monthly[key]) monthly[key] = { total: 0, outlets: {} };
+
+    const total = Object.values(item.outlets).reduce((sum, val) => sum + val, 0);
+    monthly[key].total += total;
+
+    Object.entries(item.outlets).forEach(([outlet, value]) => {
+      if (!monthly[key].outlets[outlet]) monthly[key].outlets[outlet] = 0;
+      monthly[key].outlets[outlet] += value;
+    });
+  });
+  return monthly;
+}
+
+/* ===============================
    DOM CONTENT LOADED
    =============================== */
 document.addEventListener("DOMContentLoaded", function () {
@@ -98,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         events: events,
 
-        /* MONTH HEADER TOTAL */
+        /* MONTH HEADER TOTAL WITH OUTLETS, SORTED & SEPARATOR */
         datesSet: function () {
           document.querySelectorAll(".month-header-total").forEach(el => el.remove());
           document.querySelectorAll(".fc-multimonth-month").forEach(monthEl => {
@@ -106,11 +128,25 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!dateStr) return;
             const date = new Date(dateStr);
             const key = `${date.getFullYear()}-${date.getMonth()}`;
-            if (!monthlyTotals[key]) return;
+            const monthlyData = monthlyTotals[key];
+            if (!monthlyData) return;
+
             const header = document.createElement("div");
             header.className = "month-header-total";
-            header.textContent =
-              `Total Sales: ₹${monthlyTotals[key].total.toLocaleString("en-IN")}`;
+
+            // Total sales
+            let html = `<div class="total-sales">Total Sales: ₹${monthlyData.total.toLocaleString("en-IN")}</div>`;
+            html += `<div class="separator"></div>`;
+
+            // Outlet-wise totals sorted descending
+            const sortedOutlets = Object.entries(monthlyData.outlets)
+              .sort((a, b) => b[1] - a[1]);
+
+            sortedOutlets.forEach(([outlet, value]) => {
+              html += `<div class="outlet-sales">${outlet}: ₹${value.toLocaleString("en-IN")}</div>`;
+            });
+
+            header.innerHTML = html;
             monthEl.querySelector(".fc-multimonth-title").after(header);
           });
         },
@@ -196,16 +232,3 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch(err => console.error("Error loading sales.json", err));
 
 });
-
-/* MONTHLY TOTAL CALCULATION */
-function calculateMonthlyTotals(data) {
-  const monthly = {};
-  data.forEach(item => {
-    const date = new Date(item.date);
-    const key = `${date.getFullYear()}-${date.getMonth()}`;
-    const total = Object.values(item.outlets).reduce((sum, val) => sum + val, 0);
-    if (!monthly[key]) monthly[key] = { total: 0 };
-    monthly[key].total += total;
-  });
-  return monthly;
-}
