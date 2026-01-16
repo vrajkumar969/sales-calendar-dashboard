@@ -38,11 +38,31 @@ h1 {
 .month-header-total {
   padding: 8px;
   background: #f9fafb;
-  font-size: 14px;
-  font-weight: bold;
-  color: #16a34a;
   text-align: center;
   border-bottom: 1px solid #e5e7eb;
+}
+
+/* Total Sales styling inside month-header */
+.month-header-total .total-sales {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Separator line */
+.month-header-total .separator {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 4px 0;
+}
+
+/* Outlet-wise totals */
+.month-header-total .outlet-sales {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  color: #065f46;
+  line-height: 1.2;
 }
 
 /* ===============================
@@ -51,7 +71,7 @@ h1 {
 .fc-daygrid-day-frame {
   min-height: 140px;
   padding: 0.1px;
-  position: relative;          /* REQUIRED */
+  position: relative;          
   border-radius: 12px;
   transition: background-color 0.3s ease, transform 0.15s ease;
   box-shadow: inset 0 0 0 #0000;
@@ -64,15 +84,15 @@ h1 {
 
 /* Reserve space so holiday is never hidden */
 .fc-daygrid-day-events {
-  margin-bottom: 20px;         /* REQUIRED */
+  margin-bottom: 20px;         
 }
 
-/* Holiday text pinned at bottom */
+/* Holiday text pinned at bottom, responsive */
 .holiday-text {
   position: absolute;
   bottom: 4px;
-  left: 6px;
-  right: 6px;
+  left: 4px;
+  right: 4px;
 
   font-size: 8px;
   font-weight: 700;
@@ -80,14 +100,22 @@ h1 {
   color: #92400e;
 
   line-height: 1.2;
-
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
   overflow: hidden;
   white-space: normal;
   pointer-events: none;
+
+  padding: 0 2px;
+}
+
+/* On mobile, reduce font-size and clamp lines */
+@media (max-width: 768px) {
+  .holiday-text {
+    font-size: 6px;
+    -webkit-line-clamp: 1;
+  }
 }
 
 /* ===============================
