@@ -188,3 +188,29 @@ h2 {
   width: 100%;
   height: 100%;
 }
+
+/* Outlet buttons */
+.outlet-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.outlet-buttons button {
+  margin: 0 6px 12px 6px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.outlet-buttons button:hover {
+  background: #1e40af;
+}
+
+.outlet-buttons button.active {
+  background: #1e3a8a;
+}
