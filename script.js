@@ -6,6 +6,7 @@ const fixedHolidays = {
   "01-14": "Makar Sankranti",
   "01-15": "Vasi Uttarayan",
   "01-26": "Republic Day",
+  "02-14": "Valentine's Day",
   "08-15": "Independence Day",
   "10-02": "Gandhi Jayanti",
   "12-25": "Christmas",
